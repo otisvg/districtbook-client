@@ -23,19 +23,20 @@ class App extends Component {
 
     render() {
 
-        var { isLoaded, items } = this.state;
+      var { isLoaded, items } = this.state;
 
-        if (!isLoaded) {
-            return <div > Loading..... < /div>;
-        } else {
-            return (
+      if (!isLoaded) {
+        return <div>Loading...</div>;
+      }
 
-                <
-                div className = "App" >
-                Data has been loaded <
-                /div>
-            );
-        }
-    }
+      else {
+      return (
+        <div className="App">
+           hey
+        </div>
+      );
+      }
+  }
+}
+export default App;
 
-    export default App;
