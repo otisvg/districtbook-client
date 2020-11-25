@@ -1,49 +1,53 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './App.css'
+import NavBar from './components/NavBar';
+import PostFeed from './PostFeed';
 
-class App extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: [],
-            isLoaded: false,
-        }
-    }
-
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    isLoaded: true,
-                    items: json,
-                })
-            });
-    }
-
-    render() {
-
-      var { isLoaded, items } = this.state;
-
-      if (!isLoaded) {
-        return <div>Loading...</div>;
-      }
-
-      else {
-      return (
-        <div className="App">
-           <ul>
-             {items.map(item => (
-                <li key={item.id}>
-                  Name: {item.name} | Email: {item.email}
-                </li>
-             ))}
-            
-           </ul>
-        </div>
-      );
-      } 
-  }
+function App() {
+  return (
+    <div className="App">
+      <NavBar />
+      <header className="App-header">
+        <h1>DistrictBook</h1>
+        <hr />
+      </header>
+      <body className="App-body">
+        <PostFeed />
+      </body>
+    </div>
+  )
 }
+
 export default App;
 
+
+// class App extends React.Component {
+
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       items: [],
+//       isLoaded: false,
+//     }
+//   }
+
+//   componentDidMount() {
+//     fetch('http://localhost:3000/api/v1/posts')
+//       .then(res => res.json())
+//       .then(json => {
+//         this.setState({
+//           isLoaded: true,
+//           items: json,
+//       })
+//     });
+//   }
+
+//   render() {
+//     return [
+//       <NavBar />,
+//       <PostForm />,
+//       <PostFeed />
+//     ]
+//   }
+// } 
+// export default App;
