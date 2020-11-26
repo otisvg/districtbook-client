@@ -1,21 +1,21 @@
-import React from 'react';
-import './App.css'
-import NavBar from './components/NavBar';
-import PostFeed from './PostFeed';
+import Header from "./Header";
+import Left from "./left"
+import Middle from "./Middle"
+// import index from "./index"
+// import NavBar from './NavBar';
+// import PostFeed from './PostFeed';
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <h1>DistrictBook</h1>
-        <hr />
-      </header>
-      <body className="App-body">
-        <PostFeed />
-      </body>
+      <Header />
+      <div className="facebook">
+        <Left />
+        <Middle />
+      </div>
     </div>
-  )
+  );
 }
 
 export default App;
@@ -51,3 +51,14 @@ export default App;
 //   }
 // } 
 // export default App;
+
+// <div className="App">
+//       <NavBar />
+//       <header className="App-header">
+//         <h1>DistrictBook</h1>
+//         <hr />
+//       </header>
+//       <body className="App-body">
+//         <PostFeed />
+//       </body>
+//     </div>
