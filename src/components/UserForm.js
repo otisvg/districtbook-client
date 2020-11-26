@@ -20,7 +20,7 @@ class UserForm extends Component {
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
-    axios.post('http://localhost:3000/api/v1/users', this.state)
+    axios.post('http://localhost:3000/api/v1/usersc', this.state)
     .then(response => {
       console.log(response)
     })
