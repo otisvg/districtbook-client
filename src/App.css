@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,800;1,700&display=swap');
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 20px;
+  padding: 0;
+  line-height: 1;
+  background-color: #fbfbfb;
+}
+
 * {
   font-family: 'Raleway', sans-serif;
 }
