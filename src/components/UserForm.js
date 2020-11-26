@@ -1,15 +1,17 @@
 // const { ReactComponent } = require("*.svg");
 import React, { Component } from 'react'
-import FormCheckLabel from 'react-bootstrap/esm/FormCheckLabel'
+// import FormCheckLabel from 'react-bootstrap/esm/FormCheckLabel'
+import axios from 'axios';
 
 class UserForm extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      username: '',
       email: '',
-      password: ''
+      username: '',
+      password: '',
+      passwordConfirmation: ''
     }
   }
   changeHandler = e => {
@@ -18,10 +20,17 @@ class UserForm extends Component {
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
+    axios.post('http://localhost:3000/api/v1/users', this.state)
+    .then(response => {
+      console.log(response)
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   render() {
-    const {username, email, password } = this.state
+    const {email, username,  password, passwordConfirmation} = this.state
 
     return (
       <div>
@@ -44,7 +53,7 @@ class UserForm extends Component {
           <div>
           <label for="passwordConfirmation">Password Confirmation</label>
           <br/>
-          <input type= "password" name="passwordConfirmation" value= {password} onChange = {this.changeHandler} />
+          <input type= "password" name="passwordConfirmation" value= {passwordConfirmation} onChange = {this.changeHandler} />
           </div>
           <button type="submit">Sign up</button>
        </form>
