@@ -12,7 +12,7 @@ const Header = () => {
     <div className="hcenter">
       <span className="cIcon">
         <FaHome className="hmicons"/>
-          <span className="hnotify">20</span>
+          <span className="hnotify">31</span>
       </span>
       <span className="cIcon">
         <FaFontAwesomeFlag className="hmicons"/>

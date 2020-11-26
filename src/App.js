@@ -11,9 +11,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Left />
-      <Middle />
-
+      <div className="facebook">
+        <Left />
+        <Middle />
+      </div>
     </div>
   );
 }
