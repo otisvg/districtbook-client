@@ -132,3 +132,35 @@
   margin-left: 20%;
   font-weight: bold;
 }
+/**Status*/
+
+.status {
+  width:80%;
+  margin:15px auto;
+  padding:15px;
+  background-color: #fff;
+  border-radius:10px;
+}
+
+.status-f {
+  display:flex;
+  width:100%;
+}
+
+.status-input {
+  width:20%;
+}
+
+.status-img span {
+  display: inline-block;;
+  width:45px;
+  height:45px;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.status-img span img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}

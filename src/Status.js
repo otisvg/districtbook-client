@@ -10,7 +10,9 @@ const Status = () => {
           <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt=""/>
         </span>
       </div>
-      <input type="text" placeholder="Whats on your mind?" />
+        <div class="status-input">
+          <input type="text" placeholder="Whats on your mind?" />
+        </div>
     </div>
     
 
